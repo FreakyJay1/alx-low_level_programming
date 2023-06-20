@@ -1,9 +1,9 @@
 #include "main.h"
 /**
- * main: print_putchar
- * Description: 'prints _pputchar to stdout'
- * return: always 0
-*/
+ * main - is the entry point
+ * Description: "prints the _putchar to stdout"
+ * Return: always 0
+ */
 int main(void)
 {
 	_putchar('_');
@@ -14,6 +14,6 @@ int main(void)
 	_putchar('h');
 	_putchar('a');
 	_putchar('r');
-	-putchar('\n');
+	_putchar('\n');
 	return (0);
 }
