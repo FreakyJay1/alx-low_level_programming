@@ -5,19 +5,16 @@
  */
 int main(void)
 {
-	int count;
-	unsigned long fib1 = 0, fib2 = 1, sum;
+	int i, z = 0;
 
-	for (count = 0; count < 50; count++)
+	while (i < 1024)
 	{
-		sum = fib1 + fib2;
-		printf("%lu", sum);
-		fib1 = fib2;
-		fib2 = sum;
-		if (count == 49)
-			printf("\n");
-		else
-			printf(",");
+		if ((i % 3 == 0) || (i % 5 == 0))
+		{
+			z += i;
+		}
+		i++;
 	}
+	printf("%d\n", z);
 	return (0);
 }
