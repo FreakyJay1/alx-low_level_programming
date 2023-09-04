@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdlib.h>
 
 /**
  * read_textfile - this reads a text files and prints it to the posix stdo
@@ -9,31 +10,19 @@
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int file_j;
-	ssize_t lenj, lenb;
 	char *buf;
+	ssize_t dj;
+	ssize_t j;
+	ssize_t d;
 
-	if (filename == NULL)
-		return (0);
-	file_j = open(filename, O_RDONLY);
-	if (file_j == -1)
+	dj = open(filename, O_RDONLY);
+	if (dj == -1)
 		return (0);
 	buf = malloc(sizeof(char) * letters);
-	if (buf == NULL)
-	{
-		close(file_j);
-		return (0);
-	}
-	lenj = read(file_j, buf, letters);
-	close(file_j)
-	if (lenj == -1)
-	{
-		free(buf);
-		return (0);
-	}
-	lenb = write(STDOUT_FILENO, buf, lenj);
+	b = read(dj, buf, letters);
+	j = write(STDOUT_FILENO, buf, b);
+
 	free(buf);
-	if (lenj != lenb)
-		return (0);
-	return (lenb);
+	close(dj);
+	return (j);
 }
