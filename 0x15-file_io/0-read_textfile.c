@@ -25,7 +25,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(dj);
 		return (0);
 	}
-	ch[num_read] = '\0';
+	cb[num_r] = '\0';
 	num_w = write(STDOUT_FILENO, cb, num_r);
 
 	free(cb);
